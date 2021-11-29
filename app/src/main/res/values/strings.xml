@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">AndroidProject</string>
+    <string name="app_name">The Guardian Newspaper Articles</string>
+    <string name="save">Save</string>
+    <string name="favorite">Favorite</string>
+    <string name="open_in_browser">Open In Browser</string>
+    <string name="search">Search</string>
+    <string name="choose_browser">Choose browser</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_favorite_detail">Favorite Detail</string>
+    <string name="label_home">Home</string>
+    <string name="label_detail">Details</string>
+
+    <string name="message_error">Error</string>
+    <string name="retry">Retry</string>
+
 </resources>
