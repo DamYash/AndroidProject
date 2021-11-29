@@ -1,5 +1,6 @@
 package com.example.androidproject;
 
+
 import androidx.annotation.Nullable;
 
 public class HttpError extends Throwable

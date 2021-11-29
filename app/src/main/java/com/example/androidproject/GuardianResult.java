@@ -2,6 +2,7 @@ package com.example.androidproject;
 
 import androidx.annotation.NonNull;
 
+
 public class GuardianResult {
     private String id;
     private String type;
