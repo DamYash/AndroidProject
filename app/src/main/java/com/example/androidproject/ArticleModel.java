@@ -3,6 +3,7 @@ package com.example.androidproject;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
 public class ArticleModel implements Parcelable {
     private String id;
     private String title;
