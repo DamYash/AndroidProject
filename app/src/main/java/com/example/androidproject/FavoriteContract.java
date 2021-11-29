@@ -1,6 +1,7 @@
 package com.example.androidproject;
 
-public class FavoriteContract {
+public class FavoriteContract
+{
 
     public static final String QUERY_CREATE_TABLE = "CREATE TABLE " + FavoriteContract.TABLE_NAME + "(" + FavoriteContract.COLUMN_ID + " TEXT PRIMARY KEY, " + FavoriteContract.COLUMN_TITLE + " TEXT, " + FavoriteContract.COLUMN_URL + " TEXT, " + FavoriteContract.COLUMN_SECTION_NAME + " TEXT)";
 

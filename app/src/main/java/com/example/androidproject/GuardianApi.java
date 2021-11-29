@@ -4,12 +4,10 @@ import androidx.annotation.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
-
 import javax.net.ssl.HttpsURLConnection;
 
 public class GuardianApi {

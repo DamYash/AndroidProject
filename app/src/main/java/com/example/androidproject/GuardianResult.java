@@ -133,5 +133,6 @@ public class GuardianResult {
                 ", pillarId='" + pillarId + '\'' +
                 ", pillarName='" + pillarName + '\'' +
                 '}';
+
     }
 }

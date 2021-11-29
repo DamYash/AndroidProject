@@ -2,15 +2,12 @@ package com.example.androidproject;
 
 import static android.database.sqlite.SQLiteDatabase.CONFLICT_REPLACE;
 import static com.example.androidproject.FavoriteContract.TABLE_NAME;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.NonNull;
-
 import java.util.ArrayList;
 
 public class GDatabase extends SQLiteOpenHelper {

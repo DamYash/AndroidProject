@@ -79,6 +79,7 @@ public class ArticleModel implements Parcelable {
         this.sectionName = in.readString();
     }
 
+
     public static final Creator<ArticleModel> CREATOR = new Creator<ArticleModel>() {
         @Override
         public ArticleModel createFromParcel(Parcel source) {
