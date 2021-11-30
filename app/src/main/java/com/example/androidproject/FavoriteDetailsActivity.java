@@ -27,7 +27,8 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.label_favorite_detail);
         setSupportActionBar(toolbar);
 
-        if (getSupportActionBar() != null) {
+        if (getSupportActionBar() != null)
+        {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }

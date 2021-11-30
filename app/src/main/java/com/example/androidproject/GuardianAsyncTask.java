@@ -5,9 +5,11 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.annotation.Nullable;
 
-public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse> {
+public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
+{
 
-    public interface Callback {
+    public interface Callback
+    {
         void onPreExecute();
 
         void onError(Throwable t, String query);
@@ -18,18 +20,21 @@ public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
     private final Callback callback;
 
     @SuppressWarnings("deprecation")
-    public GuardianAsyncTask(Callback callback) {
+    public GuardianAsyncTask(Callback callback)
+    {
         this.callback = callback;
     }
 
     @Override
-    protected void onPreExecute() {
+    protected void onPreExecute()
+    {
         super.onPreExecute();
         callback.onPreExecute();
     }
 
     @Override
-    protected GuardianResponse doInBackground(String... strings) {
+    protected GuardianResponse doInBackground(String... strings)
+    {
         String query = strings.length > 0 ? strings[0] : null;
         try {
             return GuardianApi.search(query);
@@ -40,7 +45,8 @@ public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
     }
 
     @Override
-    protected void onPostExecute(GuardianResponse guardianResponse) {
+    protected void onPostExecute(GuardianResponse guardianResponse)
+    {
         super.onPostExecute(guardianResponse);
         callback.onPostExecute(guardianResponse);
     }
