@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;

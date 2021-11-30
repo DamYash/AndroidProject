@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import static android.database.sqlite.SQLiteDatabase.CONFLICT_REPLACE;
 import static com.example.androidproject.FavoriteContract.TABLE_NAME;
 import android.content.ContentValues;

@@ -40,9 +40,6 @@ public class MainDetailsActivity extends AppCompatActivity {
         tvUrl.setText(articleModel.getUrl());
         tvSelectionName.setText(articleModel.getSectionName());
 
-        tvUrl.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
-
-        btnOpenInBrowser.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
 
         fabSave.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());

@@ -42,11 +42,6 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
         tvUrl.setText(articleModel.getUrl());
         tvSelectionName.setText(articleModel.getSectionName());
 
-        tvUrl.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
-
-        AppCompatButton btnOpenInBrowser = findViewById(R.id.btn_open_in_browser);
-
-        btnOpenInBrowser.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
 
         FloatingActionButton fabSave = findViewById(R.id.fab_save);
         fabSave.setOnClickListener(v -> {
