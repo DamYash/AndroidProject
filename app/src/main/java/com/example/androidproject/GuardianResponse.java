@@ -1,10 +1,10 @@
 package com.example.androidproject;
 
-
 import androidx.annotation.NonNull;
 import java.util.List;
 
-public class GuardianResponse {
+public class GuardianResponse
+{
     private String status;
     private String userTier;
     private int total;

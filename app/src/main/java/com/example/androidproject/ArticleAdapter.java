@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +22,6 @@ public class ArticleAdapter extends ArrayAdapter<ArticleModel> {
         super(context, 0, data);
         this.itemClick = item;
     }
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

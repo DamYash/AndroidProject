@@ -2,8 +2,8 @@ package com.example.androidproject;
 
 import androidx.annotation.NonNull;
 
-
-public class GuardianResult {
+public class GuardianResult
+{
     private String id;
     private String type;
     private String sectionId;

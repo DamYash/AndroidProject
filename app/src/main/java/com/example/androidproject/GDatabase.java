@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import static android.database.sqlite.SQLiteDatabase.CONFLICT_REPLACE;
 import static com.example.androidproject.FavoriteContract.TABLE_NAME;
 import android.content.ContentValues;
@@ -16,7 +15,8 @@ public class GDatabase extends SQLiteOpenHelper {
     private static GDatabase guardianDatabase = null;
 
     @NonNull
-    public static GDatabase getInstance(Context context) {
+    public static GDatabase getInstance(Context context)
+    {
         if (guardianDatabase == null) {
             guardianDatabase = new GDatabase(context);
         }

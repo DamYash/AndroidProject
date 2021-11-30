@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import androidx.annotation.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,7 +48,8 @@ public class GuardianApi {
         );
     }
 
-    public static GuardianResponse search(@Nullable String query) throws Throwable {
+    public static GuardianResponse search(@Nullable String query) throws Throwable
+    {
         StringBuilder stringUrl = new StringBuilder(BASE_URL);
         stringUrl.append("/search?api-key=1fb36b70-1588-4259-b703-2570ea1fac6a");
         stringUrl.append("&page-size=50");
