@@ -15,6 +15,7 @@ public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
         void onPostExecute(@Nullable GuardianResponse guardianResponse);
     }
 
+
     private final Callback callback;
 
     @SuppressWarnings("deprecation")
