@@ -9,4 +9,5 @@ public class FavoriteContract
     public static final String COLUMN_TITLE = "title";
     public static final String COLUMN_URL = "url";
     public static final String COLUMN_SECTION_NAME = "section_name";
+
 }

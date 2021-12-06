@@ -5,23 +5,24 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_search"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent=".9" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ti_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_search"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ti_search"
-            app:layout_constraintWidth_percent=".8" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_search"
+        app:layout_constraintWidth_percent=".8" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,6 +42,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Title" />
 
+
         <TextView
             android:id="@+id/tv_url"
             android:layout_width="match_parent"

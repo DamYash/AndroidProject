@@ -6,6 +6,7 @@
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4473958333333333" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/drawable-v24/ic_menu_favorite.xml" value="0.4473958333333333" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.33240740740740743" />
+        <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/drawable/ic_menu_help.xml" value="0.33240740740740743" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/activity_article_model.xml" value="0.2484375" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/activity_favorite.xml" value="0.2484375" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/activity_favorite_details.xml" value="0.2484375" />
@@ -14,7 +15,10 @@
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/ic_menu_favorite.xml" value="0.2484375" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/item_article.xml" value="0.4171875" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/menu.xml" value="0.2484375" />
+        <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/navigation_menu.xml" value="0.26403985507246375" />
         <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/layout/search.xml" value="0.43125" />
+        <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/menu/menu.xml" value="0.43125" />
+        <entry key="..\:/Users/daman/AndroidStudioProjects/AndroidProject/app/src/main/res/menu/navigation_menu.xml" value="0.43125" />
       </map>
     </option>
   </component>

@@ -1,5 +1,6 @@
 <resources>
 
+
     <string name="app_name">The Guardian Newspaper Articles</string>
     <string name="save">Save</string>
     <string name="favorite">Favorite</string>
@@ -7,11 +8,36 @@
     <string name="search">Search</string>
     <string name="choose_browser">Choose browser</string>
     <string name="label_favorite">Favorite</string>
-    <string name="label_favorite_detail">Favorite Detail</string>
+    <string name="label_favorite_detail">Favorite Details</string>
     <string name="label_home">Home</string>
     <string name="label_detail">Details</string>
     <string name="message_error">Error</string>
     <string name="retry">Retry</string>
+    <string name="all">All</string>
+    <string name="help">Help</string>
+    <string name="news">News</string>
+    <string name="sport">Sports</string>
+    <string name="nav_open" translatable="false">Open</string>
+    <string name="nav_close" translatable="false">Close</string>
+    <string name="input_text_search">Please Input Text</string>
+    <string name="dialog_title_search">Enter Your Text</string>
+    <string name="version">version</string>
+    <string name="message_no_result">No Result</string>
+    <string name="help_item_main">Click items in the list for more details</string>
+    <string name="help_search">Click the search button to enter input</string>
+    <string name="help_drawer">Open menu drawer to see full menu</string>
+    <string name="dialog_save_title">Sure, you want to save to favorites?</string>
+    <string name="message_success_save_to_favorite">Successfully Added to Favorite</string>
+    <string name="message_fail_save_to_favorite">Failed to Save</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="help_save_message">To save, press save and confirm</string>
+    <string name="help_open_message">Click the link or press the open browser button to open it in your browser</string>
+    <string name="dialog_title_delete_favorite">Sure, you want to delete from favorites?</string>
+    <string name="success_delete_favorite">Successfully Deleted</string>
+    <string name="fail_delete_favorite">Failed to Delete</string>
+    <string name="help_item_favorite">Click the item to see the details</string>
+
 
 
 </resources>
