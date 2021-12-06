@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements
         toolbar.setSubtitle(getString(R.string.version) + " " + BuildConfig.VERSION_NAME);
     }
 
+
     private void showDialogSearch() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Enter Your Text");

@@ -17,6 +17,7 @@ public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
 
     private final Callback callback;
 
+
     @SuppressWarnings("deprecation")
     public GuardianAsyncTask(Callback callback) {
         this.callback = callback;

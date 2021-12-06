@@ -9,3 +9,4 @@ public class HttpError extends Throwable
         super(message);
     }
 }
+

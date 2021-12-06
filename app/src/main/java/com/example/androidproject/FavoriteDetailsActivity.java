@@ -31,7 +31,6 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-
         ArticleModel articleModel = getIntent().getParcelableExtra(EXTRA_DATA_ARTICLE);
 
         TextView tvTitle = findViewById(R.id.tv_title);

@@ -22,6 +22,7 @@ public class GDatabase extends SQLiteOpenHelper {
         return guardianDatabase;
     }
 
+
     private static final String DATABASE_NAME = "guardian";
 
     private GDatabase(Context context)

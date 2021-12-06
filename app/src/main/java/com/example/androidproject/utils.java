@@ -15,6 +15,7 @@ public class utils
         context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_browser)));
     }
 
+
     public static void showDialogHelp(Context context, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Help Menu");

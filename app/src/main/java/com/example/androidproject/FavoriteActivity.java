@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import java.util.ArrayList;
 
+
 public class FavoriteActivity extends AppCompatActivity implements ArticleAdapter.ItemClick {
 
     public static final String KEY_IS_DELETE = "KEY_IS_DELETE";

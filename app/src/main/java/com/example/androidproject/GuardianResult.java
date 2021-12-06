@@ -29,6 +29,7 @@ public class GuardianResult {
         this.pillarName = pillarName;
     }
 
+
     public String getId() {
         return id;
     }

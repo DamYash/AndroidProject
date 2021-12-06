@@ -23,6 +23,7 @@
             tools:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <ProgressBar
         android:id="@+id/progress_circular"
         android:layout_width="match_parent"

@@ -27,6 +27,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
     <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
         <item name="android:textSize">13sp</item>
     </style>
