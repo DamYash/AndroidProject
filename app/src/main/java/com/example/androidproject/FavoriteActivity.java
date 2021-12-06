@@ -3,8 +3,13 @@ package com.example.androidproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -29,8 +34,11 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
 
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        if (getSupportActionBar() != null)
+        {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         articleModels.addAll(GDatabase.getInstance(this).get());
         arrayAdapter = new ArticleAdapter(this, articleModels, this);
@@ -54,4 +62,21 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
             arrayAdapter.notifyDataSetChanged();
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu_help) {
+            utils.showDialogHelp(this, getString(R.string.help_item_favorite));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

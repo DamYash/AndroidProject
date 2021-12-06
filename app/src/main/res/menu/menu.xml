@@ -1,8 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_favorite"
-        android:icon="@drawable/ic_menu_favorite"
-        android:title="@string/favorite"
+        android:id="@+id/menu_help"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/help"
         app:showAsAction="collapseActionView" />
 </menu>

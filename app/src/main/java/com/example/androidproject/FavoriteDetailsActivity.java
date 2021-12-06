@@ -48,23 +48,24 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
         btnOpenInBrowser.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
 
         FloatingActionButton fabSave = findViewById(R.id.fab_save);
+
         fabSave.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-            builder.setTitle("Are you sure want to delete from favorites?");
+            builder.setTitle(R.string.dialog_title_delete_favorite);
             builder.setCancelable(true);
-            builder.setPositiveButton("Yes", (dialog, id) -> {
+            builder.setPositiveButton(R.string.yes, (dialog, id) -> {
                 if (GDatabase.getInstance(getBaseContext()).delete(articleModel.getId())) {
-                    Toast.makeText(v.getContext(), "Success Delete To Favorite", Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(), v.getContext().getString(R.string.success_delete_favorite), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent();
                     intent.putExtra(FavoriteActivity.KEY_IS_DELETE, true);
                     setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
-                    Toast.makeText(v.getContext(), "Fail Delete To Favorite", Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(), v.getContext().getString(R.string.fail_delete_favorite), Toast.LENGTH_LONG).show();
                 }
                 dialog.cancel();
             });
-            builder.setNegativeButton("No", (dialog, id) -> dialog.cancel());
+            builder.setNegativeButton(R.string.no,(dialog, id) -> dialog.cancel());
             AlertDialog dialog = builder.create();
             dialog.show();
         });

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Les articles du journal The Guardian</string>
+    <string name="save">Sauvegarder</string>
+    <string name="favorite">Favorite</string>
+    <string name="open_in_browser">Ouvrir dans le navigateur</string>
+    <string name="search">Chercher</string>
+    <string name="choose_browser">Choisissez le navigateur</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_favorite_detail">Détails favoris</string>
+    <string name="label_home">Accueil</string>
+    <string name="label_detail">Des détails</string>
+    <string name="message_error">Erreur</string>
+    <string name="retry">Réessayez</string>
+    <string name="all">Toute</string>
+    <string name="help">Aider</string>
+    <string name="news">Nouvelles</string>
+    <string name="sport">Des sports</string>
+    <string name="nav_open" translatable="false">Ouverte</string>
+    <string name="nav_close" translatable="false">Proche</string>
+    <string name="input_text_search">Veuillez saisir du texte</string>
+    <string name="dialog_title_search">Entrez votre texte</string>
+    <string name="version">version</string>
+    <string name="message_no_result">Pas de résultat</string>
+    <string name="help_item_main">Cliquez sur les éléments de la liste pour plus de détails</string>
+    <string name="help_search">Cliquez sur le bouton de recherche pour entrer l\'entrée</string>
+    <string name="help_drawer">Ouvrez le tiroir de menu pour voir le menu complet</string>
+    <string name="dialog_save_title">Bien sûr, vous voulez enregistrer dans vos favoris ?</string>
+    <string name="message_success_save_to_favorite">Ajouté avec succès aux favoris</string>
+    <string name="message_fail_save_to_favorite">Échec de l\'enregistrement</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="help_save_message">Pour enregistrer, appuyez sur enregistrer et validez</string>
+    <string name="help_open_message">Cliquez sur le lien ou appuyez sur le bouton Ouvrir le navigateur pour l\'ouvrir dans votre navigateur</string>
+    <string name="dialog_title_delete_favorite">Bien sûr, vous voulez supprimer des favoris ?</string>
+    <string name="success_delete_favorite">Supprimé avec succès</string>
+    <string name="fail_delete_favorite">Échec de la suppression</string>
+    <string name="help_item_favorite">Cliquez sur l\'article pour voir les détails</string>
+
+</resources>

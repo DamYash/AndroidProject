@@ -52,7 +52,7 @@ public class GuardianApi {
         StringBuilder stringUrl = new StringBuilder(BASE_URL);
         stringUrl.append("/search?api-key=1fb36b70-1588-4259-b703-2570ea1fac6a");
         stringUrl.append("&page-size=50");
-        if (query !=null) stringUrl.append("&q=").append(query);
+        if (query !=null) stringUrl.append(query);
 
         URL url = new URL(stringUrl.toString());
 

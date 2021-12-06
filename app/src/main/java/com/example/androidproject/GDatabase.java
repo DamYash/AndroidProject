@@ -24,12 +24,14 @@ public class GDatabase extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "guardian";
 
-    private GDatabase(Context context) {
+    private GDatabase(Context context)
+    {
         super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db)
+    {
         db.execSQL(FavoriteContract.QUERY_CREATE_TABLE);
     }
 

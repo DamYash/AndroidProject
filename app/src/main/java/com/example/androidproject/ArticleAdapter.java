@@ -1,5 +1,6 @@
 package com.example.androidproject;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ public class ArticleAdapter extends ArrayAdapter<ArticleModel> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         ArticleModel data = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.item_article, parent, false);
+        @SuppressLint("ViewHolder") View view = LayoutInflater.from(getContext()).inflate(R.layout.item_article, parent, false);
         view.findViewById(R.id.root).setOnClickListener(v -> itemClick.onClick(v, data));
         ((TextView) view.findViewById(R.id.web_title)).setText(data.getTitle());
         ((TextView) view.findViewById(R.id.web_url)).setText(data.getUrl());

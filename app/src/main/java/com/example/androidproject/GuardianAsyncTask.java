@@ -5,8 +5,8 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.annotation.Nullable;
 
-public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse> {
-
+public class GuardianAsyncTask extends AsyncTask<String, Void, GuardianResponse>
+{
     public interface Callback {
         void onPreExecute();
 
