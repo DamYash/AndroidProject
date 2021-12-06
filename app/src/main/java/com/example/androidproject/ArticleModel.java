@@ -9,7 +9,8 @@ public class ArticleModel implements Parcelable {
     private String url;
     private String sectionName;
 
-    public ArticleModel(String id, String title, String url, String sectionName) {
+    public ArticleModel(String id, String title, String url, String sectionName)
+    {
         this.id = id;
         this.title = title;
         this.url = url;
