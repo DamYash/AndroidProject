@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Les articles du journal The Guardian</string>
     <string name="save">Sauvegarder</string>
     <string name="favorite">Favorite</string>

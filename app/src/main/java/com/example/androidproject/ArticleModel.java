@@ -15,7 +15,6 @@ public class ArticleModel implements Parcelable {
         this.url = url;
         this.sectionName = sectionName;
     }
-
     public String getId() {
         return id;
     }

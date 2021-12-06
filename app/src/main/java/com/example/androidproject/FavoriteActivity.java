@@ -24,7 +24,8 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
     private ArticleAdapter arrayAdapter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_favorite);

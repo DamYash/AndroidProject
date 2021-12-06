@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-public class ArticleAdapter extends ArrayAdapter<ArticleModel> {
-
+public class ArticleAdapter extends ArrayAdapter<ArticleModel>
+{
     private final ItemClick itemClick;
 
     public interface ItemClick {

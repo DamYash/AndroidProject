@@ -20,6 +20,7 @@ public class MainDetailsActivity extends AppCompatActivity {
 
     public static final String EXTRA_DATA_ARTICLE = "EXTRA_DATA_ARTICLE";
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
