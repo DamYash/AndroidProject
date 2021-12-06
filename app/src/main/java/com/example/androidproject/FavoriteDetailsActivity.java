@@ -1,5 +1,6 @@
 package com.example.androidproject;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +27,8 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.label_favorite_detail);
         setSupportActionBar(toolbar);
 
-        if (getSupportActionBar() != null) {
+        if (getSupportActionBar() != null)
+        {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
@@ -41,11 +43,6 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
         tvUrl.setText(articleModel.getUrl());
         tvSelectionName.setText(articleModel.getSectionName());
 
-        tvUrl.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
-
-        AppCompatButton btnOpenInBrowser = findViewById(R.id.btn_open_in_browser);
-
-        btnOpenInBrowser.setOnClickListener(v -> utils.openBrowser(v, articleModel.getUrl()));
 
         FloatingActionButton fabSave = findViewById(R.id.fab_save);
         fabSave.setOnClickListener(v -> {

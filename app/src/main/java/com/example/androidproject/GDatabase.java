@@ -15,7 +15,8 @@ public class GDatabase extends SQLiteOpenHelper {
     private static GDatabase guardianDatabase = null;
 
     @NonNull
-    public static GDatabase getInstance(Context context) {
+    public static GDatabase getInstance(Context context)
+    {
         if (guardianDatabase == null) {
             guardianDatabase = new GDatabase(context);
         }
