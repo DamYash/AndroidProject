@@ -1,6 +1,8 @@
 package com.example.androidproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.Menu;
@@ -20,6 +22,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -28,16 +31,11 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements
-        GuardianAsyncTask.Callback, ArticleAdapter.ItemClick {
+public class MainActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
-    private final ArrayList<ArticleModel> articleModels = new ArrayList<>();
-
-    private ArrayAdapter<ArticleModel> arrayAdapter;
-
-    private ProgressBar progressCircular;
+    private final Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,19 +44,13 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        progressCircular = findViewById(R.id.progress_circular);
         FloatingActionButton fabSearch = findViewById(R.id.fab_search);
-        ListView listView = findViewById(R.id.list_view);
 
         setUpToolbar(toolbar);
         setSupportActionBar(toolbar);
         setUpNavigationDrawer(toolbar);
 
-        arrayAdapter = new ArticleAdapter(this, articleModels, this);
-
-        listView.setAdapter(arrayAdapter);
-
-        new GuardianAsyncTask(this).execute();
+        replaceFragment(getSupportFragmentManager(), null);
 
         fabSearch.setOnClickListener(vFab -> showDialogSearch());
     }
@@ -85,12 +77,12 @@ public class MainActivity extends AppCompatActivity implements
                 startActivity(new Intent(this, FavoriteActivity.class));
                 return true;
             } else if (id == R.id.menu_all) {
-                new GuardianAsyncTask(this).execute();
+                replaceFragment(getSupportFragmentManager(), null);
                 return true;
             } else if (id == R.id.menu_news) {
-                new GuardianAsyncTask(this).execute("&section=news");
+                replaceFragment(getSupportFragmentManager(), MainFragment.QUERY_NEWS);
             } else if (id == R.id.menu_sport) {
-                new GuardianAsyncTask(this).execute("&section=sport");
+                replaceFragment(getSupportFragmentManager(), MainFragment.QUERY_SPORT);
                 return true;
             }
             return false;
@@ -118,12 +110,18 @@ public class MainActivity extends AppCompatActivity implements
         alertDialog.show();
         AppCompatButton btnSearch = view.findViewById(R.id.btn_search);
         TextInputEditText tiSearch = view.findViewById(R.id.ti_search);
+        SharedPreferences preferences = getSharedPreferences("pref", Context.MODE_PRIVATE);
+        String KEY_LAST_SEARCH = "last_search";
+        tiSearch.setText(preferences.getString(KEY_LAST_SEARCH, null));
         btnSearch.setOnClickListener(vSearch -> {
             Editable editable = tiSearch.getText();
             if (editable != null) {
                 String query = editable.toString();
+                preferences.edit()
+                        .putString(KEY_LAST_SEARCH, query)
+                        .apply();
                 if (!query.isEmpty()) {
-                    new GuardianAsyncTask(MainActivity.this).execute("&q=" + query);
+                    replaceFragment (getSupportFragmentManager(), MainFragment.querySearch(query));
                     alertDialog.dismiss();
                 } else {
                     Toast.makeText(
@@ -134,40 +132,6 @@ public class MainActivity extends AppCompatActivity implements
                 }
             }
         });
-    }
-
-    @Override
-    public void onPreExecute() {
-        progressCircular.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onError(Throwable t, String query) {
-        String errorMessage = t.getMessage();
-        String message = errorMessage != null ? errorMessage : getBaseContext().getString(R.string.message_error);
-        View root = findViewById(R.id.root);
-        Snackbar snackbar = Snackbar.make(root, message, Snackbar.LENGTH_LONG);
-        snackbar.show();
-        snackbar.setAction(R.string.retry, v -> {
-            new GuardianAsyncTask(this).execute(query);
-            snackbar.dismiss();
-        });
-    }
-
-    @Override
-    public void onPostExecute(@Nullable GuardianResponse response) {
-        if (response != null && !response.getResults().isEmpty()) {
-            articleModels.clear();
-            for (GuardianResult result : response.getResults()) {
-                articleModels.add(
-                        new ArticleModel(result.getId(), result.getWebTitle(), result.getWebUrl(), result.getSectionName())
-                );
-            }
-            arrayAdapter.notifyDataSetChanged();
-        } else {
-            Toast.makeText(getBaseContext(), getString(R.string.message_no_result), Toast.LENGTH_LONG).show();
-        }
-        progressCircular.setVisibility(View.GONE);
     }
 
     @Override
@@ -192,11 +156,15 @@ public class MainActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
-
-    @Override
-    public void onClick(View v, ArticleModel model) {
-        Intent intent = new Intent(v.getContext(), MainDetailsActivity.class);
-        intent.putExtra(MainDetailsActivity.EXTRA_DATA_ARTICLE, model);
-        v.getContext().startActivity(intent);
+    private void replaceFragment(FragmentManager fragmentManager, @Nullable String query) {
+        if (query != null) {
+            bundle.putString(MainFragment.KEY_QUERY, query);
+        } else {
+            bundle.remove(MainFragment.KEY_QUERY);
+        }
+        fragmentManager
+                .beginTransaction()
+                .replace(R.id.fcv, MainFragment.class, bundle)
+                .commit();
     }
 }

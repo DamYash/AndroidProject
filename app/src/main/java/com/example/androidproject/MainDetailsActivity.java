@@ -55,7 +55,7 @@ public class MainDetailsActivity extends AppCompatActivity {
             builder.setTitle(R.string.dialog_save_title);
             builder.setCancelable(true);
             builder.setPositiveButton(R.string.yes, (dialog, id) -> {
-                if (GDatabase.getInstance(getBaseContext()).save(articleModel)) {
+                if (GDatabase.getInstance(getBaseContext()).saveToFavorite(articleModel)) {
                     Toast.makeText(v.getContext(), "Success Save To Favorite", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(v.getContext(), "Fail Save To Favorite", Toast.LENGTH_LONG).show();
@@ -86,6 +86,4 @@ public class MainDetailsActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

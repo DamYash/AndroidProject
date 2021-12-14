@@ -37,6 +37,7 @@
     <string name="success_delete_favorite">Successfully Deleted</string>
     <string name="fail_delete_favorite">Failed to Delete</string>
     <string name="help_item_favorite">Click the item to see the details</string>
+    <string name="help_delete_message">To delete press the delete button, press Yes if you want to delete and No to cancel. If successful, will delete it from favorites</string>
 
 
 
