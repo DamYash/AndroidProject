@@ -3,8 +3,13 @@ package com.example.androidproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,9 +70,25 @@ public class FavoriteDetailsActivity extends AppCompatActivity {
                 }
                 dialog.cancel();
             });
-            builder.setNegativeButton(R.string.no,(dialog, id) -> dialog.cancel());
+            builder.setNegativeButton(R.string.no, (dialog, id) -> dialog.cancel());
             AlertDialog dialog = builder.create();
             dialog.show();
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu_help) {
+            utils.showDialogHelp(this, String.format("%s\n\n%s", getString(R.string.help_delete_message), getString(R.string.open_in_browser)));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

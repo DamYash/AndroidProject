@@ -23,30 +23,17 @@
             tools:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <ProgressBar
-        android:id="@+id/progress_circular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
-
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/my_drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <ListView
-            android:id="@+id/list_view"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="?actionBarSize"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-            tools:listitem="@layout/item_article" />
+            android:layout_marginBottom="?actionBarSize" />
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"

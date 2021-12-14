@@ -38,5 +38,7 @@
     <string name="success_delete_favorite">Supprimé avec succès</string>
     <string name="fail_delete_favorite">Échec de la suppression</string>
     <string name="help_item_favorite">Cliquez sur l\'article pour voir les détails</string>
+    <string name="help_delete_message">Pour supprimer, appuyez sur le bouton Supprimer, appuyez sur Oui si vous souhaitez supprimer et sur Non pour annuler. En cas de succès, le supprimera des favoris</string>
+
 
 </resources>

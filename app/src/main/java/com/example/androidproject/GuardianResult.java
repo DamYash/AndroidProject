@@ -99,7 +99,7 @@ public class GuardianResult {
     }
 
     public void setHosted(boolean hosted) {
-        isHosted = hosted;
+        this.isHosted = hosted;
     }
 
     public String getPillarId() {
@@ -134,6 +134,5 @@ public class GuardianResult {
                 ", pillarId='" + pillarId + '\'' +
                 ", pillarName='" + pillarName + '\'' +
                 '}';
-
     }
 }

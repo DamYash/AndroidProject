@@ -9,12 +9,16 @@ public class ArticleModel implements Parcelable {
     private String title;
     private String url;
     private String sectionName;
+    private String query;
+    private boolean isFavorite;
 
-    public ArticleModel(String id, String title, String url, String sectionName) {
+    public ArticleModel(String id, String title, String url, String sectionName, String query, boolean isFavorite) {
         this.id = id;
         this.title = title;
         this.url = url;
         this.sectionName = sectionName;
+        this.query = query;
+        this.isFavorite = isFavorite;
     }
     public String getId() {
         return id;
@@ -48,9 +52,22 @@ public class ArticleModel implements Parcelable {
         this.sectionName = sectionName;
     }
 
-    public static Creator<ArticleModel> getCREATOR() {
-        return CREATOR;
+    public String getQuery() {
+        return query;
     }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.isFavorite = favorite;
+    }
+
 
     @Override
     public int describeContents() {
@@ -63,6 +80,8 @@ public class ArticleModel implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.url);
         dest.writeString(this.sectionName);
+        dest.writeString(this.query);
+        dest.writeByte(this.isFavorite ? (byte) 1 : (byte) 0);
     }
 
     public void readFromParcel(Parcel source) {
@@ -70,6 +89,8 @@ public class ArticleModel implements Parcelable {
         this.title = source.readString();
         this.url = source.readString();
         this.sectionName = source.readString();
+        this.query = source.readString();
+        this.isFavorite = source.readByte() != 0;
     }
 
     protected ArticleModel(Parcel in) {
@@ -77,8 +98,9 @@ public class ArticleModel implements Parcelable {
         this.title = in.readString();
         this.url = in.readString();
         this.sectionName = in.readString();
+        this.query = in.readString();
+        this.isFavorite = in.readByte() != 0;
     }
-
 
     public static final Creator<ArticleModel> CREATOR = new Creator<ArticleModel>() {
         @Override

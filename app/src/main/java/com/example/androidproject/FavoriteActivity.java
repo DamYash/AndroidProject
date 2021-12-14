@@ -42,7 +42,7 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        articleModels.addAll(GDatabase.getInstance(this).get());
+        articleModels.addAll(GDatabase.getInstance(this).getFavorite());
         arrayAdapter = new ArticleAdapter(this, articleModels, this);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(arrayAdapter);
@@ -60,7 +60,7 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK && data != null && data.getBooleanExtra(KEY_IS_DELETE, false)) {
             articleModels.clear();
-            articleModels.addAll(GDatabase.getInstance(this).get());
+            articleModels.addAll(GDatabase.getInstance(this).getFavorite());
             arrayAdapter.notifyDataSetChanged();
         }
     }
