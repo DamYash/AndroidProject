@@ -30,7 +30,6 @@
         app:layout_constraintTop_toBottomOf="@+id/web_title"
         tools:text="Web Url" />
 
-
     <TextView
         android:id="@+id/section_name"
         android:layout_width="match_parent"

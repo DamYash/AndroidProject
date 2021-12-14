@@ -68,7 +68,6 @@ public class ArticleModel implements Parcelable {
         this.isFavorite = favorite;
     }
 
-
     @Override
     public int describeContents() {
         return 0;

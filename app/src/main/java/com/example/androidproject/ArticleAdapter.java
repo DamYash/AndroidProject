@@ -1,6 +1,5 @@
 package com.example.androidproject;
 
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;

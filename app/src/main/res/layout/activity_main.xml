@@ -23,6 +23,7 @@
             tools:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/my_drawer_layout"
         android:layout_width="match_parent"
