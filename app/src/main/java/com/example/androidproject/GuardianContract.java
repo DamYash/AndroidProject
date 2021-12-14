@@ -1,6 +1,7 @@
 package com.example.androidproject;
 
-public class GuardianContract {
+public class GuardianContract
+{
 
     public static final String QUERY_CREATE_TABLE = "CREATE TABLE " + GuardianContract.TABLE_NAME + "(" + GuardianContract.COLUMN_ID + " TEXT PRIMARY KEY, " + GuardianContract.COLUMN_TITLE + " TEXT, " + GuardianContract.COLUMN_URL + " TEXT, " + GuardianContract.COLUMN_SECTION_NAME + " TEXT, " + GuardianContract.COLUMN_QUERY + " TEXT, " + GuardianContract.COLUMN_IS_FAVORITE + " INTEGER)";
 

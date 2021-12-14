@@ -70,6 +70,7 @@ public class GuardianResult {
         this.webPublicationDate = webPublicationDate;
     }
 
+
     public String getWebTitle() {
         return webTitle;
     }

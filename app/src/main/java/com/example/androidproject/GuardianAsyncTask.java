@@ -41,7 +41,6 @@ public class GuardianAsyncTask extends AsyncTask<String, ArticleModel, Void> {
         callback.onPreExecute();
     }
 
-
     @Override
     protected Void doInBackground(String... strings) {
         String query = strings.length > 0 ? strings[0] : null;

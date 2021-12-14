@@ -47,7 +47,6 @@ public class FavoriteActivity extends AppCompatActivity implements ArticleAdapte
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(arrayAdapter);
     }
-
     @Override
     public void onClick(View v, ArticleModel model) {
         Intent intent = new Intent(v.getContext(), FavoriteDetailsActivity.class);
